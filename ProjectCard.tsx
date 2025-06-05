@@ -28,7 +28,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, category, image, onCli
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <img src={image} alt={title} className="w-full h-full object-cover" />
+      <img
+        src={image}
+        alt={title}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover"
+      />
       <div className="overlay">
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="text-sm text-gray-300 mt-1">{category}</p>
