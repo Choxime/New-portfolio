@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FilmIcon, Palette, PenTool, Cuboid as Cube, Instagram, ArrowRight } from 'lucide-react';
-import PageTransition from '../components/PageTransition';
-import { useCursor } from '../context/CursorContext';
+import PageTransition from './PageTransition';
+import { useCursor } from './CursorContext';
 
 const Home: React.FC = () => {
   const { setCursorType } = useCursor();

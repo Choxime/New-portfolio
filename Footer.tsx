@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
-import { useCursor } from '../context/CursorContext';
+import { useCursor } from './CursorContext';
 
 const Footer: React.FC = () => {
   const { setCursorType } = useCursor();

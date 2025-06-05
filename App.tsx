@@ -2,21 +2,21 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 // Components
-import Layout from './components/Layout';
+import Layout from './Layout';
 
 // Pages
-import Home from './pages/Home';
-import MotionDesign from './pages/MotionDesign';
-import VisualIdentity from './pages/VisualIdentity';
-import Illustration from './pages/Illustration';
-import ThreeD from './pages/ThreeD';
-import SocialMedia from './pages/SocialMedia';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+import Home from './Home';
+import MotionDesign from './MotionDesign';
+import VisualIdentity from './VisualIdentity';
+import Illustration from './Illustration';
+import ThreeD from './ThreeD';
+import SocialMedia from './SocialMedia';
+import About from './About';
+import Contact from './Contact';
+import NotFound from './NotFound';
 
 // Context
-import { CursorProvider } from './context/CursorContext';
+import { CursorProvider } from './CursorContext';
 
 function App() {
   const location = useLocation();

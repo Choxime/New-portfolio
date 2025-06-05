@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useCursor } from '../context/CursorContext';
+import { useCursor } from './CursorContext';
 
 interface ProjectCardProps {
   title: string;
