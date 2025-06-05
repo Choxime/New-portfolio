@@ -54,6 +54,10 @@
   .btn-outline {
     @apply border-2 border-white text-white hover:bg-white hover:text-black;
   }
+
+  .skip-link {
+    @apply absolute left-2 top-2 -translate-y-full focus:translate-y-0 transition-transform bg-indigo-600 text-white px-4 py-2 rounded z-50;
+  }
   
   .custom-cursor {
     @apply fixed top-0 left-0 w-8 h-8 rounded-full bg-indigo-500 pointer-events-none mix-blend-difference z-50;
