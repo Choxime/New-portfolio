@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Award, Clock, Globe, Star, Users } from 'lucide-react';
-import PageTransition from '../components/PageTransition';
-import { useCursor } from '../context/CursorContext';
+import { Clock, Globe, Star, Users } from 'lucide-react';
+import PageTransition from './PageTransition';
+import { useCursor } from './CursorContext';
 
 const About: React.FC = () => {
   const { setCursorType } = useCursor();

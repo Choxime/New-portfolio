@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Palette, FilmIcon, PenTool, Cuboid as Cube, Instagram } from 'lucide-react';
-import { useCursor } from '../context/CursorContext';
+import { useCursor } from './CursorContext';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,6 +67,7 @@ const Header: React.FC = () => {
                 key={item.name}
                 to={item.path}
                 className={`nav-item ${location.pathname === item.path ? 'active' : ''}`}
+                aria-current={location.pathname === item.path ? 'page' : undefined}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -78,6 +79,7 @@ const Header: React.FC = () => {
           <button
             className="md:hidden z-50"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -110,7 +112,7 @@ const Header: React.FC = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="flex items-center">
-                    {item.icon && <item.icon className="mr-2\" size={20} />}
+                    {item.icon && <item.icon className="mr-2" size={20} />}
                     {item.name}
                   </div>
                 </Link>

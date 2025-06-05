@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import PageTransition from '../components/PageTransition';
-import ProjectCard from '../components/ProjectCard';
+import PageTransition from './PageTransition';
+import ProjectCard from './ProjectCard';
 
 const projects = [
   {

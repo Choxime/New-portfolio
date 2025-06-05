@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
-import PageTransition from '../components/PageTransition';
-import { useCursor } from '../context/CursorContext';
+import PageTransition from './PageTransition';
+import { useCursor } from './CursorContext';
 
 const Contact: React.FC = () => {
   const { setCursorType } = useCursor();

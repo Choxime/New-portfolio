@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import ScrollProgress from './ScrollProgress';
+import ScrollToTopButton from './ScrollToTopButton';
 import { motion } from 'framer-motion';
 
 interface LayoutProps {
@@ -10,6 +12,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollProgress />
       <Header />
       <motion.main
         className="flex-grow"
@@ -20,6 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </motion.main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };
