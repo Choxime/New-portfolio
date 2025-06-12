@@ -1,9 +1,26 @@
-#!/usr/bin/env sh
-set -e
-npm run build
-cd dist
-git init
-git add -A
-git commit -m "deploy"
-git push -f https://github.com/choxime/New-portfolio.git master:gh-pages
-cd -
+name: Deploy Vite to GitHub Pages
+
+on:
+  push:
+    branches:
+      - principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Build Vite
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
